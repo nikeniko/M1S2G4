@@ -124,14 +124,14 @@ console.log(boundary2(700));
  ritornare la stringa originale senza alterarla.
 */
 
-function epify(G = "Gigi") {
-  let result = G + " EPICODE";
-  return result;
+function epify(g) {
+  if (g.startsWith("EPICODE")) return g;
+  else {
+    return "EPICODE " + g;
+  }
 }
 
-const Messaggio = epify();
-
-console.log(Messaggio);
+console.log(epify("Gigi"));
 
 /* ESERCIZIO 6
  Scrivi una funzione di nome "check3and7" che accetta un numero positivo come parametro. La funzione deve controllare che il parametro sia un multiplo
