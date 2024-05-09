@@ -143,8 +143,11 @@ console.log(reverseString());
 */
 
 function upperFirst(Stringhe = "ciao mi chiamo Gigi!") {
-  return Stringhe.split(" ")
-    .map((parola) => parola.charAt(0).toLocaleUpperCase() + parola.slice(1))
+  return Stringhe.split(" ") // divide in "ciao" "mi" "chiamo" "Gigi"
+    .map(
+      // creà un array con gli elementi di "Stringhe"
+      (parole) => parole.charAt(0).toLocaleUpperCase() + parole.slice(1)
+    ) // "parole" stringa con all'interno gli elementi di "Stringhe" parole.charAT(0) prendesolo le prime lettere .toLocaleUpperCase li fa diventare grande + parole.slice(1) aggiunge gli elementi senza la prima lettera
     .join(" ");
 }
 
@@ -166,8 +169,8 @@ console.log(cutString());
 */
 
 function giveMeRandomme(n) {
-  return Array(n)
-    .fill()
+  return Array(n) //crea un array con all'interno "undefined"
+    .fill() // modifica l'array originale
     .map(() => Math.floor(Math.random() * 11));
 }
 console.log(giveMeRandomme(7));
