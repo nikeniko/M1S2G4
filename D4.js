@@ -20,6 +20,14 @@ function area2(L1 = 10, L2 = 20) {
 const rectangleArea2 = area2();
 console.log("il risultato dell'area del rettangolo 2 :", rectangleArea2);
 
+function area(l1, l2) {
+  const result = l1 * l2;
+  return result;
+}
+
+area(10, 20);
+console.log(area(10, 20));
+
 /* ESERCIZIO 2
  Scrivi una funzione di nome "crazySum", che riceve due numeri interi come parametri.
  La funzione deve ritornare la somma dei due parametri, ma se il valore dei due parametri è il medesimo deve invece tornare
